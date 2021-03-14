@@ -22,19 +22,33 @@
 
 .task-item {
   display: flex;
+  align-items: center;
   flex-direction: row;
   font-size: 18px;
+  padding: 35px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
   .check-box {
     display: flex;
+    flex-shrink: 0;
+    margin-right: 20px;
     border: 2px solid #eee;
     border-radius: 50%;
     width: 28px;
     height: 28px;
+    transition: background-color 0.2s;
     i.material-icons {
       font-size: 20px;
       margin: auto;
       // icon hide by default
       opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+  &:hover .check-box {
+    background: #eee;
+    i.material-icons {
+      opacity: 0.4;
     }
   }
 }
