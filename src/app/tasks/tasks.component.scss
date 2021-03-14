@@ -62,4 +62,36 @@
       opacity: 0.4;
     }
   }
+  .task-controls-box {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    display: flex;
+  }
+}
+
+.task-controls-box .task-control-btn {
+  display: flex;
+  background: #f5f7f8;
+  padding: 7px 10px;
+  i.material-icons {
+    font-size: 20px;
+  }
+  &:hover {
+    background: #eee;
+  }
+  &:active {
+    background: #e5e7e8;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 7px;
+  }
+  &:last-of-type {
+    border-top-right-radius: 7px;
+  }
+}
+
+.task-controls-box .task-control-btn.is-danger:active i.material-icons {
+  color: rgb(155, 27, 27);
 }
