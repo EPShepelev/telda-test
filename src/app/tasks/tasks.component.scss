@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: relative;
   font-size: 18px;
   padding: 35px 15px;
   border-bottom: 1px solid #eee;
@@ -62,11 +63,20 @@
       opacity: 0.4;
     }
   }
+  &:hover .task-controls-box {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+  }
   .task-controls-box {
     position: absolute;
     bottom: 0;
     right: 5px;
     display: flex;
+    // hide by default
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
   }
 }
 
@@ -76,9 +86,13 @@
   padding: 7px 10px;
   i.material-icons {
     font-size: 20px;
+    color: #555;
   }
   &:hover {
     background: #eee;
+    i.material-icons {
+      color: #333;
+    }
   }
   &:active {
     background: #e5e7e8;
