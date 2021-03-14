@@ -29,17 +29,6 @@
   padding: 35px 15px;
   border-bottom: 1px solid #eee;
   cursor: pointer;
-  &.completed {
-    color: #aaa;
-    & .check-box {
-      background: rgb(11, 223, 170);
-      border-color: rgb(11, 223, 170);
-      i.material-icons {
-        opacity: 1;
-        color: #000;
-      }
-    }
-  }
   .check-box {
     display: flex;
     flex-shrink: 0;
@@ -77,6 +66,18 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s;
+  }
+}
+
+.task-item.completed {
+  color: #aaa;
+  & .check-box {
+    background: rgb(11, 223, 170);
+    border-color: rgb(11, 223, 170);
+    i.material-icons {
+      opacity: 1;
+      color: #000;
+    }
   }
 }
 
