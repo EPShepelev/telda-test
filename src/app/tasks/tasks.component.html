@@ -22,7 +22,7 @@
           <button class="button alt-gradient-btn">Add</button>
         </p>
       </div>
-      <div *ngIf="todoTextField.invalid">
+      <div *ngIf="todoTextField.invalid && showValidationErrors">
         <p class="help is-danger" *ngIf="todoTextField.errors.required">
           Please enter the text of your todo
         </p>
