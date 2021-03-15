@@ -5,7 +5,7 @@
   <div class="task-text">
     {{ task.text }}
   </div>
-  <div class="task-controls-box">
+  <div class="task-controls-box" (click)="$event.stopPropagation()">
     <div class="task-control-btn">
       <i class="material-icons">edit</i>
     </div>

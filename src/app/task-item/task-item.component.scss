@@ -15,7 +15,7 @@
     border-radius: 50%;
     width: 28px;
     height: 28px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s;
     i.material-icons {
       font-size: 20px;
       margin: auto;
@@ -85,6 +85,10 @@
   }
 }
 
-.task-controls-box .task-control-btn.is-danger:active i.material-icons {
+.task-controls-box .task-control-btn.is-danger:hover i.material-icons {
   color: rgb(155, 27, 27);
+}
+
+.task-controls-box .task-control-btn.is-danger:active i.material-icons {
+  color: rgb(189, 37, 37);
 }
