@@ -18,6 +18,7 @@ export class TasksComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm) {
+    if (form.invalid) return alert('Task is invalid');
     this.dataService.addTask(new Task(form.value.text));
   }
 }
