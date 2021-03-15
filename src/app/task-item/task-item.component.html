@@ -1,4 +1,4 @@
-<div class="task-item" [class.completed]="task.completed">
+<div class="task-item" (click)="onTaskClicked()" [class.completed]="task.completed">
   <div class="check-box">
     <i class="material-icons">check</i>
   </div>

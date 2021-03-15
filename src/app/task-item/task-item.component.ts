@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../shared/task.model';
 
 @Component({
@@ -8,8 +8,13 @@ import { Task } from '../shared/task.model';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: Task;
+  @Output() taskClicked: EventEmitter<void> = new EventEmitter()
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onTaskClicked(){
+    this.taskClicked.emit()
+  }
 }

@@ -24,4 +24,8 @@ export class TasksComponent implements OnInit {
     this.showValidationErrors = false;
     form.reset();
   }
+
+  toggleCompleted(task: Task){
+    task.completed = !task.completed
+   }
 }
