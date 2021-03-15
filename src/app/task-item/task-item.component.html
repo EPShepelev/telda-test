@@ -6,7 +6,7 @@
     {{ task.text }}
   </div>
   <div class="task-controls-box" (click)="$event.stopPropagation()">
-    <div class="task-control-btn">
+    <div class="task-control-btn" (click)="onEditClicked()">
       <i class="material-icons">edit</i>
     </div>
     <div class="task-control-btn is-danger">

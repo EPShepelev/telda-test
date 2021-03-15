@@ -28,4 +28,8 @@ export class TasksComponent implements OnInit {
   toggleCompleted(task: Task){
     task.completed = !task.completed
    }
+
+   editTask(task: Task){
+     this.dataService.updateTask()
+   }
 }

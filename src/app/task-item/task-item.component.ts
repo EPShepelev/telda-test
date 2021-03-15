@@ -9,6 +9,7 @@ import { Task } from '../shared/task.model';
 export class TaskItemComponent implements OnInit {
   @Input() task: Task;
   @Output() taskClicked: EventEmitter<void> = new EventEmitter()
+  @Output() editClicked: EventEmitter<void> = new EventEmitter()
 
   constructor() {}
 
@@ -16,5 +17,9 @@ export class TaskItemComponent implements OnInit {
 
   onTaskClicked(){
     this.taskClicked.emit()
+  }
+
+  onEditClicked(){
+    this.editClicked.emit()
   }
 }
