@@ -3,11 +3,18 @@
 </section>
 <div class="container">
   <div class="add-todo-box">
-    <form>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
       <h2 class="title is-4">New task</h2>
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <input class="input" type="text" placeholder="Add todo..." />
+          <input
+            ngModel
+            required
+            name="text"
+            class="input"
+            type="text"
+            placeholder="Add todo..."
+          />
         </p>
         <p class="control">
           <button class="button alt-gradient-btn">Add</button>
@@ -19,29 +26,17 @@
 <section class="section">
   <div class="container">
     <div class="task-list">
-      <div class="task-item completed">
+      <div
+        class="task-item"
+        *ngFor="let task of tasks"
+        [class.completed]="task.completed"
+      >
         <div class="check-box">
           <i class="material-icons">check</i>
         </div>
         <div class="task-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-          minus natus unde eum sapiente? Architecto recusandae quod laboriosam
-          ab perspiciatis!
+          {{ task.text }}
         </div>
-        <div class="task-controls-box">
-          <div class="task-control-btn">
-            <i class="material-icons">edit</i>
-          </div>
-          <div class="task-control-btn is-danger">
-            <i class="material-icons">delete</i>
-          </div>
-        </div>
-      </div>
-      <div class="task-item">
-        <div class="check-box">
-          <i class="material-icons">check</i>
-        </div>
-        <div class="task-text">this is a placeholder to the todo text</div>
         <div class="task-controls-box">
           <div class="task-control-btn">
             <i class="material-icons">edit</i>
