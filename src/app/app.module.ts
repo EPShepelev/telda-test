@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskItemComponent } from './task-item/task-item.component';
 
 @NgModule({
-  declarations: [AppComponent, TasksComponent],
+  declarations: [AppComponent, TasksComponent, TaskItemComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

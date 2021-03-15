@@ -36,26 +36,7 @@
 <section class="section">
   <div class="container">
     <div class="task-list">
-      <div
-        class="task-item"
-        *ngFor="let task of tasks"
-        [class.completed]="task.completed"
-      >
-        <div class="check-box">
-          <i class="material-icons">check</i>
-        </div>
-        <div class="task-text">
-          {{ task.text }}
-        </div>
-        <div class="task-controls-box">
-          <div class="task-control-btn">
-            <i class="material-icons">edit</i>
-          </div>
-          <div class="task-control-btn is-danger">
-            <i class="material-icons">delete</i>
-          </div>
-        </div>
-      </div>
+      <app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
     </div>
   </div>
 </section>
