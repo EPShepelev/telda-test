@@ -8,18 +8,23 @@ import { Task } from '../shared/task.model';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: Task;
-  @Output() taskClicked: EventEmitter<void> = new EventEmitter()
-  @Output() editClicked: EventEmitter<void> = new EventEmitter()
+  @Output() taskClicked: EventEmitter<void> = new EventEmitter();
+  @Output() editClicked: EventEmitter<void> = new EventEmitter();
+  @Output() deleteClicked: EventEmitter<void> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onTaskClicked(){
-    this.taskClicked.emit()
+  onTaskClicked() {
+    this.taskClicked.emit();
   }
 
-  onEditClicked(){
-    this.editClicked.emit()
+  onEditClicked() {
+    this.editClicked.emit();
+  }
+
+  onDeleteClicked() {
+    this.deleteClicked.emit();
   }
 }

@@ -44,7 +44,10 @@ export class TasksComponent implements OnInit {
         this.dataService.updateTask(index, result);
       }
     });
+  }
 
-    //  this.dataService.updateTask()
+  deleteTask(task: Task) {
+    const index = this.tasks.indexOf(task);
+    this.dataService.deleteTask(index);
   }
 }
