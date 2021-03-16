@@ -20,5 +20,11 @@ export class EditTaskDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  onFormSubmit(form: NgForm) {}
+  onFormSubmit(form: NgForm) {
+    const updatedTask = {
+      ...this.task,
+      ...form.value,
+    };
+    this.dialogRef.close(updatedTask);
+  }
 }

@@ -36,6 +36,7 @@ export class TasksComponent implements OnInit {
 
     let dialogRef = this.dialog.open(EditTaskDialogComponent, {
       width: '600px',
+      data: task,
     });
 
     //  this.dataService.updateTask()
