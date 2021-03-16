@@ -30,6 +30,7 @@ export class TasksComponent implements OnInit {
    }
 
    editTask(task: Task){
+     const index = this.tasks.indexOf(task)
      this.dataService.updateTask()
    }
 }
