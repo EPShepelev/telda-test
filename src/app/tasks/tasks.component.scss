@@ -1,7 +1,7 @@
 .heading-section {
   padding: 100px;
   padding-bottom: 150px;
-  background: linear-gradient(to right, rgb(2, 228, 171), rgb(74, 215, 240));
+  background: linear-gradient(to right, rgb(0, 78, 146), rgb(0, 4, 40));
   h1.title {
     font-weight: bold;
     color: #fff;
@@ -12,6 +12,12 @@
   max-width: 800px !important;
 }
 
+.add-task-box-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .add-todo-box {
   padding: 25px;
   margin-top: -68px;
@@ -19,4 +25,3 @@
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(#000, 0.2);
 }
-
