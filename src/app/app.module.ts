@@ -9,9 +9,22 @@ import { TaskItemComponent } from './task-item/task-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditTaskDialogComponent } from './edit-task-dialog/edit-task-dialog.component';
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
-  declarations: [AppComponent, TasksComponent, TaskItemComponent, EditTaskDialogComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    TasksComponent,
+    TaskItemComponent,
+    EditTaskDialogComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

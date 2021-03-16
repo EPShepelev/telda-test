@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./edit-task-dialog.component.scss'],
 })
 export class EditTaskDialogComponent implements OnInit {
-  constructor() {}
+  constructor(public dialogRef: MatDialogRef<EditTaskDialogComponent>) {}
 
   ngOnInit(): void {}
 
