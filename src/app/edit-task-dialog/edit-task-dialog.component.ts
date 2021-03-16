@@ -21,6 +21,7 @@ export class EditTaskDialogComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm) {
+    if (form.invalid) return;
     const updatedTask = {
       ...this.task,
       ...form.value,

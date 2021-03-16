@@ -39,6 +39,12 @@ export class TasksComponent implements OnInit {
       data: task,
     });
 
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.dataService.updateTask(index, result);
+      }
+    });
+
     //  this.dataService.updateTask()
   }
 }

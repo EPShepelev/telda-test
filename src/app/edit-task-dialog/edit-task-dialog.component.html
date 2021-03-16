@@ -8,8 +8,19 @@
           class="input"
           [ngModel]="task.text"
           name="text"
+          #todoTextField="ngModel"
+          required
+          minlength="2"
           placeholder="Type task text..."
         />
+      </div>
+      <div *ngIf="todoTextField.invalid">
+        <p class="help is-danger" *ngIf="todoTextField.errors.required">
+          Please enter the text of your todo
+        </p>
+        <p class="help is-danger" *ngIf="todoTextField.errors.minlength">
+          Todo text must be minimum two characters
+        </p>
       </div>
     </div>
     <br />
