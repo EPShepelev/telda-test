@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../shared/task.model';
 import { DataService } from '../shared/data.service';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { EditTaskDialogComponent } from '../edit-task-dialog/edit-task-dialog.component';
 
 @Component({
   selector: 'app-tasks',
@@ -12,7 +14,7 @@ export class TasksComponent implements OnInit {
   tasks: Task[];
   showValidationErrors: boolean;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.tasks = this.dataService.getAllTasks();
@@ -25,12 +27,17 @@ export class TasksComponent implements OnInit {
     form.reset();
   }
 
-  toggleCompleted(task: Task){
-    task.completed = !task.completed
-   }
+  toggleCompleted(task: Task) {
+    task.completed = !task.completed;
+  }
 
-   editTask(task: Task){
-     const index = this.tasks.indexOf(task)
-     this.dataService.updateTask()
-   }
+  editTask(task: Task) {
+    const index = this.tasks.indexOf(task);
+
+    let dialogRef = this.dialog.open(EditTaskDialogComponent, {
+      width: '600px',
+    });
+
+    //  this.dataService.updateTask()
+  }
 }
